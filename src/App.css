@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+    background-color: rgb(255, 243, 255); /* Arka plan rengi (örnekte beyaz) */
+/* cart start  */
+.card {
+    margin-left: 300px;
+    margin-bottom: 10px;
+    margin-top: 70px;
+    display: flex; /* Kartları yatay olarak hizalar */
+    flex-wrap: wrap; /* Kartlar sığmazsa bir alt satıra geç */
+    justify-content: space-between; /* Kartları yatay eksende eşit aralıklarla hizala */
+    width: 1000px;
+    overflow-y: auto; /* max-w-sm değeri */
+    padding: 1.5rem; /* p-6 değeri */
+    background-color: #ffffff;
+    border-radius: 1rem; /* rounded-lg değeri */
+    transition: background-color 0.3s ease; /* hover efekti */
+    min-height: 200px; /* Kartın minimum yüksekliği */;
+}
+
+.card.dark {
+    background-color: #1f2937; /* dark:bg-gray-800 değeri */
+    border-color: #374151; /* dark:border-gray-700 değeri */
+}
+
+.card.dark:hover {
+    background-color: #374151; /* dark:hover:bg-gray-700 değeri */
+}
+
+.card-description {
+    margin-bottom: 0; /* font-normal değeri */
+    font-size: 1rem; /* text-gray-700 değeri */
+    color: #4b5563; /* dark:text-gray-400 değeri */
+}
+
+.label-content {
+    padding: 10px; /* İçerik dolgu */
+}
+
+.card:nth-child(1) {
+   top: 200px;
+}
+
+.card:nth-child(2) {
+    top: 500px;
+}
+
+/* cart end  */
+
+/* progressbar start  */
+    .file-upload-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+
+    .file-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .file-name {
+        margin-right: 8px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        max-width: 200px; /* Adjust max-width according to your preference */
+    }
+
+    .progress-bar-container {
+        width: 200px; /* Adjust width according to your preference */
+        height: 20px; /* Adjust height according to your preference */
+        background-color: #f33fd7;
+        border-radius: 4px;
+        margin-right: 8px;
+        margin-left: 200px;
+    }
+
+    .progress-bar {
+        height: 100%;
+        background-color: #f33fd7; /* Adjust background color according to your preference */
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+    }
+
+    .remove-button {
+        background-color: white; /* Adjust background color according to your preference */
+        color: #f693cf;
+        border: none;
+        border-radius: 4px;
+        padding: 8px 16px;
+        cursor: pointer;
+        border-radius: 1rem; /* rounded-lg değeri */
+        font-size: 1.2rem; /* Yazı boyutu */
+        margin-left: 200px;
+    }
+
+    .label-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+/* progressbar end  */
+
+/* text start  */
+.upload-text {
+    padding: 20px; /* Kenarlardan boşluk */
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    font-size: xxx-large;
+    color: #f693cf;
+    margin-top: 20px; /* Üstten boşluk */
+    margin-right: 100px;
+    margin-left: 100px;
+    border-radius: 1rem; /* rounded-lg değeri */
+}
+
+
+/* text end  */
+
+/* button start  */
+.custom-button {
+    width: 15%;
+    height: 70px;
+    position: fixed;
+    left: 1200px;
+    margin-left: 200px; /* Soldan boşluk */
+    text-align: center; /* Metni ortala */
+    font-size: 1.2rem; /* Yazı boyutu */
+    padding: 0.875rem 1.75rem; /* Yatay ve dikey dolgu */
+    font-weight: 900; /* Yazı kalınlığı */
+    background-color: rgb(255, 255, 255);
+    color: #f693cf;
+    border: none; /* Kenarlık yok */
+    border-radius: 0.5rem; /* Köşeleri yuvarlama */
+    cursor: pointer; /* İmleci el işareti yap */
+    outline: none; /* Odak çerçevesi yok */
+    z-index: 999; /* Butonun diğer içeriklerin üzerine gelmesini sağlar */
+    margin-bottom: 50px; /* Butonlar arasında boşluk */
+}
+.button1 { top: 200px; }
+.button2 { top: 300px; }
+.button3 { top: 400px; }
+
+.custom-button:hover {
+    background-image: linear-gradient(to bottom right, hotpink, #f47de1); /* Hover durumunda gradyanı değiştir */
+}
+
+.custom-button:focus {
+    box-shadow: 0 0 0 3px rgb(243, 75, 219); /* Odaklandığında kenarlık efekti */
+}
+
+.custom-button:focus:not(:focus-visible) {
+    box-shadow: none; /* Sadece klavye ile odaklandığında kenarlık efekti */
+}
+
+/* button end  */
+
+}
